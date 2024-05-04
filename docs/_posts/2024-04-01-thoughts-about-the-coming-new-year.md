@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Thoughts About the Coming New Year"
-date: 2023-04-01 00:00:00 -0000
+title: "Thoughts about the coming New Year"
+date: 2024-04-01 00:00:00 -0000
 categories: reflection
 ---
 
