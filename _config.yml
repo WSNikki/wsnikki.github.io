@@ -1,3 +1,6 @@
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+
 title: nikki's notebook
 name: nikki's notebook
 email: nikkisangsn@gmail.com
@@ -46,6 +49,8 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+exif: '[{"tag": "Model", "icon": "camera-retro"}, {"tag": "FNumber", "icon": "dot-circle-o"}, {"tag": "ExposureTime", "icon": "clock-o"}, {"tag": "ISOSpeedRatings", "icon": "info-circle"}]'
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
