@@ -1,27 +1,51 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+<div class="_progress-wrapper">
+  <div id="_progress"></div>
+</div>
+
+<header>
+  <h1>{{ page.title }}</h1>
+  <header class="title-tags">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B, %Y. It was a %A.' }}</time>
+    <div class="tags-container">
+      Posted under <span>
+          {% for tag in page.tags %}
+            <a class="tags" href="/tags#{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      &nbsp;
+    </div>
   </header>
+</header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+<hr class="stylish" />
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+<main role="main">
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+  <article>
+
+    <section class="content">
+      {{content}}
+    </section>
+
+    <hr class="stylish"/>
+
+    {% include featured.html %}
+
+    <hr class="stylish"/>
+
+    <section class="pagination">
+      {% if page.previous.url %}
+      <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next.url %}
+      <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </section>
+
+  </article>
+
+</main>
