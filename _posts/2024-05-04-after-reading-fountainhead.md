@@ -2,7 +2,8 @@
 layout: post
 title: "After reading Fountainhead"
 date: 2024-05-04 00:00:00 -0000
-categories: book review
+tags:
+  - book review
 ---
 
 There are a lot of thoughts after reading The Fountainhead.

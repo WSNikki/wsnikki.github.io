@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Thoughts about the coming New Year"
+title: Thoughts about the coming New Year
 date: 2024-04-01 00:00:00 -0000
-categories: reflection
+tags:
+  - reflection
 ---
 
 Things have changed a bit this year.

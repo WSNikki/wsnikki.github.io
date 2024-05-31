@@ -4,8 +4,7 @@ image_thumbs_loc: "/images/thumbs"
 title: nikki's notebook
 name: nikki's notebook
 email: nikkisangsn@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  to drop everthing
+description: to drop everthing
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -49,6 +48,7 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exif: '[{"tag": "Model", "icon": "camera-retro"}, {"tag": "FNumber", "icon": "dot-circle-o"}, {"tag": "ExposureTime", "icon": "clock-o"}, {"tag": "ISOSpeedRatings", "icon": "info-circle"}]'
 # Exclude from processing.
